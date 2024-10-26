@@ -15,7 +15,7 @@ params:
     imageHeight: 300 # custom size
     buttons:
       - name: About
-        url: "/about"
+        url: "about"
   socialIcons:
     - name: github
       url: "https://github.com/jesrav"
