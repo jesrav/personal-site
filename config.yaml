@@ -9,6 +9,7 @@ params:
     enabled: true
     Title: "Hi there \U0001F44B I'm Jes"
     subtitle: "This is my personal website"
+    defaultTheme: light
     imageUrl: "images/me.jpeg" # optional
     imageTitle: "" # optional
     imageWidth: 300 # custom size
