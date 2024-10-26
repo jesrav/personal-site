@@ -7,4 +7,12 @@ params:
   # home-info mode
   homeInfoParams:
     Title: "Hi there \U0001F44B"
-    Content: Welcome to my blog
+    Content: This is my personal website.
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/jesrav"
+    - name: linkedin
+      url: "linkedin.com/in/jes-ravnbøl-7b2092111"
+    - name: email
+      url: "mailto:jesravnbol@hotmail.com"
