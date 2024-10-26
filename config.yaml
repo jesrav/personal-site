@@ -1,6 +1,6 @@
-baseURL: "https://jesravnbol.com"
+baseURL: "https://jesravnbol.dk"
 languageCode: "en-us"
-title: "Home"
+title: "jesravnbol.dk"
 theme: ["PaperMod"]
 
 params:
