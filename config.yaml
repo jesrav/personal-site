@@ -1,0 +1,10 @@
+baseURL: "https://jesravnbol.com"
+languageCode: "en-us"
+title: "Jes Ravnbøl"
+theme: "PaperMod"
+
+params:
+  # home-info mode
+  homeInfoParams:
+    Title: "Hi there \U0001F44B"
+    Content: Welcome to my blog
