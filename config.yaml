@@ -23,7 +23,7 @@ params:
     - name: linkedin
       url: "https://linkedin.com/in/jes-ravnbøl-7b2092111"
     - name: email
-      url: "mailto:jesravnbol@hotmail.com"
+      url: "mailto:mail@jesravnbol.dk"
 menu:
   main:
     - name: About
