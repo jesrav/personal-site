@@ -7,7 +7,7 @@ params:
   # home-info mode
   profileMode:
     enabled: true
-    Title: "Hi there \U0001F44B I'm Jes"
+    Title: "Hi there \U0001F44B I'm Jes Ravnbøl"
     subtitle: "This is my personal website"
     defaultTheme: light
     imageUrl: "images/me.jpeg" # optional
