@@ -1,4 +1,7 @@
 # About
+
+{{< figure src="../images/me.jpg" width="300px" >}}
+
 I'm an ML Engineer that's interested in end-to-end Machine Learning systems, MLOps and Backend Development in general.
 Currently, I work as a Lead ML Engineer at [Vestas](https://www.vestas.com/).
 
