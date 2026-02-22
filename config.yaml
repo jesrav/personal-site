@@ -20,7 +20,4 @@ menu:
     - name: About
       url: about/
       weight: 10
-    - name: JeskTop
-      url: https://chat.jesravnbol.dk/
-      weight: 10
 
