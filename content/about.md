@@ -2,19 +2,18 @@
 
 {{< figure src="../images/me.jpg" width="300px" >}}
 
-Hi, I'm Jes. I've spent the last decade building machine learning systems that actually make it to production. 
-Pricing engines, fraud detection, demand forecasting, LLM-based extraction, agentic solutions and more. 
+Hi, I'm Jes. I've spent the last decade building AI/ML systems that make it to production: agentic applications, structured extraction with LLMs, pricing engines, fraud detection, and demand forecasting. 
 
-I care about business impact over exotic methods, and I believe strong software engineering is what separates ML projects that ship from those that don't.
+I care about business impact over exotic methods, and I believe strong software engineering is what separates AI projects that ship from those that don't.
 
-Currently, I'm a Lead ML Engineer/Tech Lead at Vestas AI CoE, where I've helped scale the team from 1 to 12 people, built the internal ML/AI platform, and delivered high-value production systems.
+Most recently, I was Lead AI Engineer/Tech Lead at Vestas AI CoE, where I helped scale the team from 1 to 12 people, built the internal ML/AI platform, and delivered high-value production systems. As of August 2026, I'm working as an independent AI engineer.
 
 My work spans:
 
 - **ML/AI platforms** — infrastructure, tooling, and patterns that scale best practices across teams
 - **Production ML systems** — end-to-end delivery from problem framing to deployment
 - **LLM & agentic systems** — RAG, evals, structured extraction, autonomous workflows
-- **Team building** — hiring, mentoring, and helping ML teams level up their engineering practices
+- **Team building** — hiring, mentoring, and helping AI/ML teams level up their engineering practices
 
 Before Vestas, I worked as a consultant at Kapacity (now Twoday), built ML products at DFDS, and did fraud detection at ATP.
 
