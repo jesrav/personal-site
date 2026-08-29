@@ -6,8 +6,9 @@ theme: ["PaperMod"]
 params:
   # home-info mode
   homeInfoParams:
-    Title: "Hi there \U0001F44B I'm Jes Ravnbøl"
-    Content: "This is my personal website"
+    Title: "Jes Ravnbøl"
+    Description:  "AI engineer based in Copenhagen, currently freelancing."
+    Content: "I'm an AI engineer based in Copenhagen, currently freelancing."
   socialIcons:
     - name: github
       url: "https://github.com/jesrav"
@@ -15,9 +16,3 @@ params:
       url: "https://linkedin.com/in/jes-ravnbøl-7b2092111"
     - name: email
       url: "mailto:mail@jesravnbol.dk"
-menu:
-  main:
-    - name: About
-      url: about/
-      weight: 10
-

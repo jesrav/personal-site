@@ -1,3 +1,5 @@
 .idea
 /.hugo_build.lock
 /public/
+themes/PaperMod/public/
+.hugo_build.lock
