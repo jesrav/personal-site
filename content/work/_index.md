@@ -4,7 +4,7 @@ title: "Work"
 
 ## Projects
 
-### [evaltrack](https://evaltrack.jesravnbol.dk/latest/)
+### evaltrack
 
 A pytest plugin that gates and tracks your evals, and handles LLM flakiness without rerunning CI.
 

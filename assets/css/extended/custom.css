@@ -20,6 +20,6 @@ body, .list { background: var(--theme); font-family: "Inter", "Helvetica Neue", 
 .md-content h2 { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: var(--accent); margin: 64px 0 20px; padding-top: 12px; border-top: 1px solid var(--border); }
 .md-content h3 { font-size: 28px; font-weight: 700; letter-spacing: -0.03em; }
 .md-content a:not(.anchor) { text-decoration-thickness: 1px; text-underline-offset: 0.25em; }
-.md-content a:not(.anchor):hover { color: var(--accent); }
+@media (hover: hover) { .md-content a:not(.anchor):hover { color: var(--accent); } }
 .social-icons a { padding: 8px 12px 8px 0; }
 .footer { text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; border-top: 1px solid var(--border); }
