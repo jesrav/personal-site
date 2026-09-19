@@ -16,3 +16,9 @@ params:
       url: "https://linkedin.com/in/jes-ravnbøl-7b2092111"
     - name: email
       url: "mailto:mail@jesravnbol.dk"
+
+menu:
+  main:
+    - name: Work
+      url: /work/
+      weight: 10
