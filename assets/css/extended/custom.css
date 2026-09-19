@@ -1,0 +1,25 @@
+/* Swiss: grotesk, uppercase tracked labels, red accent, generous whitespace */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+:root {
+    --main-width: 760px; --gap: 32px;
+    --theme: #fff; --entry: #fff; --code-bg: #fff;
+    --primary: #111; --content: #222; --secondary: #777; --border: #111;
+    --accent: #e0201b; --radius: 0;
+}
+:root[data-theme="dark"] { --theme: #111; --entry: #111; --code-bg: #111; --primary: #f4f4f4; --content: #ddd; --secondary: #888; --border: #f4f4f4; --accent: #ff4a44; }
+body, .list { background: var(--theme); font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 17px; line-height: 1.6; }
+.header-nav { border-bottom: 1px solid var(--border); max-width: calc(var(--main-width) + var(--gap) * 2); }
+.logo a { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em; }
+.menu a { font-size: 13px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.18em; }
+.menu .active { text-decoration: none; color: var(--accent); font-weight: 700; }
+.first-entry { min-height: 0; margin-top: 64px; }
+.home-info .entry-header h1 { font-size: 64px; font-weight: 700; letter-spacing: -0.04em; line-height: 1; }
+.home-info .entry-content { font-size: 20px; max-width: 34ch; margin-top: 24px; }
+.page-header { margin-top: 32px; }
+.page-header h1 { font-size: 64px; font-weight: 700; letter-spacing: -0.04em; line-height: 1; }
+.md-content h2 { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: var(--accent); margin: 64px 0 20px; padding-top: 12px; border-top: 1px solid var(--border); }
+.md-content h3 { font-size: 28px; font-weight: 700; letter-spacing: -0.03em; }
+.md-content a:not(.anchor) { text-decoration-thickness: 1px; text-underline-offset: 0.25em; }
+.md-content a:not(.anchor):hover { color: var(--accent); }
+.social-icons a { padding: 8px 12px 8px 0; }
+.footer { text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; border-top: 1px solid var(--border); }
