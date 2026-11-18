@@ -5,9 +5,6 @@
     <p class="intro">{{ .Params.intro | markdownify }}</p>
     {{- $links := site.Params.social | append (dict "name" "Email" "url" (printf "mailto:%s" site.Params.email)) }}
     {{ partial "links.html" $links }}
-    {{- with .Params.now }}
-    <p class="now"><span class="label">Now</span> <span>{{ . | markdownify }}</span></p>
-    {{- end }}
   </div>
   {{- with resources.Get "images/portrait.jpg" }}
   {{- $small := .Fill "480x600 Center webp q82" }}
@@ -15,6 +12,13 @@
   <img class="portrait" src="{{ $small.RelPermalink }}" srcset="{{ $small.RelPermalink }} 480w, {{ $large.RelPermalink }} 960w" sizes="(max-width: 720px) 100vw, 340px" width="480" height="600" alt="Portrait of {{ site.Title }}">
   {{- end }}
 </div>
+
+{{- with .Params.now }}
+<section class="band" id="now">
+  <h2 class="label">Now</h2>
+  <div class="band-body"><p class="lead">{{ . | markdownify }}</p></div>
+</section>
+{{- end }}
 
 {{- with site.GetPage "/projects" }}
 {{- with .RegularPages.ByWeight }}
