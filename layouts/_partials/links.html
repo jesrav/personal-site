@@ -1,0 +1,6 @@
+{{- /* Row of external links. Input: slice of dicts with name and url. */ -}}
+<div class="links caps">
+  {{- range . }}
+  <a href="{{ .url }}"{{ if hasPrefix .url "http" }} rel="noopener" target="_blank"{{ end }}>{{ .name }} ↗</a>
+  {{- end }}
+</div>

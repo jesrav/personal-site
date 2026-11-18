@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" role="img" aria-label="JR">
+<title>JR</title>
+<style>.tile{fill:#2e2e33}.letters{fill:#f5f4f1}.line{fill:#5fb891}@media (prefers-color-scheme:dark){.tile{fill:#f5f4f1}.letters{fill:#2e2e33}.line{fill:#2f7d5b}}</style>
+<rect class="tile" width="32" height="32" rx="7"/><g transform="translate(5.456 18)"><path class="letters" d="M4.55 0.18C7.03 0.18 8.61 -1.21 8.61 -3.72V-12.66H6.36V-3.75C6.36 -2.45 5.65 -1.74 4.53 -1.74C3.41 -1.74 2.7 -2.45 2.7 -3.75V-4.55H0.54V-3.75C0.54 -1.22 2.11 0.18 4.55 0.18Z M10.84 0H13.09V-4.6H15.63C15.66 -4.6 15.68 -4.6 15.69 -4.6L18.07 0H20.54L17.9 -5.01C19.41 -5.62 20.31 -6.89 20.31 -8.61C20.31 -11.09 18.56 -12.66 15.78 -12.66H10.84ZM13.09 -6.46V-10.75H15.65C17.16 -10.75 18.1 -9.93 18.1 -8.61C18.1 -7.29 17.16 -6.46 15.67 -6.46Z"/></g><path class="line" d="M5 21h2v2h18v-2h2v6h-2v-2H7v2H5z"/>
+</svg>

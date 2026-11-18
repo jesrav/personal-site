@@ -1,0 +1,3 @@
+{{- /* Full logo lockup (logo-primary.svg from the identity kit), inlined so the
+       name follows the text colour and the line follows --accent in both themes. */ -}}
+<span class="lockup">{{ with resources.Get "logo-primary.svg" }}{{ .Content | safeHTML }}{{ end }}</span>
