@@ -46,25 +46,14 @@ img { max-width: 100%; height: auto; }
 :root[data-theme="dark"] .moon, :root:not([data-theme="dark"]) .sun { display: none; }
 
 /* Logo lockup (home hero) */
-.lockup { display: inline-flex; flex-direction: column; container-type: inline-size; width: min(100%, 600px); color: var(--fg); }
+.lockup { display: block; width: min(100%, 560px); color: var(--fg); }
 .lockup svg { width: 100%; height: auto; display: block; }
-.lockup-sub {
-  display: flex; align-items: center; justify-content: space-between;
-  font-size: 4.9cqw; margin-top: 5.5cqw; line-height: 1;
-  font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; white-space: nowrap; color: var(--grey);
-}
-.lockup-sub b { font-weight: 500; margin-right: -0.2em; }
-.lockup-sub i {
-  width: 1.75em; height: 1.15em; border: 0 solid var(--accent);
-  background: linear-gradient(var(--accent), var(--accent)) center / 100% max(1px, 0.13em) no-repeat;
-}
-.lockup-sub i:first-child { border-left-width: max(1px, 0.13em); }
-.lockup-sub i:last-child { border-right-width: max(1px, 0.13em); }
 
 /* Home */
-.hero { padding: 120px 0 104px; }
+.hero { padding: 104px 0 104px; display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 64px; align-items: start; }
+.portrait { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; }
 .hero h1 { font-size: inherit; line-height: 0; }
-.intro { font-size: 24px; line-height: 1.45; max-width: 26ch; margin-top: 56px; color: var(--grey); }
+.intro { font-size: 24px; line-height: 1.45; max-width: 26ch; margin-top: 48px; color: var(--grey); }
 .links { display: flex; flex-wrap: wrap; gap: 12px 28px; margin-top: 32px; }
 .now { margin-top: 56px; max-width: 52ch; display: flex; gap: 20px; align-items: baseline; }
 .now .label { flex: none; }
@@ -119,7 +108,8 @@ img { max-width: 100%; height: auto; }
   .site-nav { gap: 14px; }
   .site-nav a { letter-spacing: 0.14em; }
   .site-logo svg { height: 24px; }
-  .hero { padding: 72px 0 72px; }
+  .hero { padding: 64px 0 72px; grid-template-columns: 1fr; gap: 48px; }
+  .portrait { max-width: 420px; }
   .intro { font-size: 20px; margin-top: 40px; }
   .now { flex-direction: column; gap: 8px; margin-top: 44px; }
   .band { grid-template-columns: 1fr; gap: 0; padding-bottom: 64px; }

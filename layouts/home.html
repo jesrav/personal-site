@@ -1,11 +1,18 @@
 {{ define "main" }}
 <div class="hero">
-  <h1 aria-label="{{ site.Title }}, {{ .Params.tagline }}">{{ partial "lockup.html" .Params.tagline }}</h1>
-  <p class="intro">{{ .Params.intro | markdownify }}</p>
-  {{- $links := site.Params.social | append (dict "name" "Email" "url" (printf "mailto:%s" site.Params.email)) }}
-  {{ partial "links.html" $links }}
-  {{- with .Params.now }}
-  <p class="now"><span class="label">Now</span> <span>{{ . | markdownify }}</span></p>
+  <div class="hero-text">
+    <h1 aria-label="{{ site.Title }}, {{ .Params.tagline }}">{{ partial "lockup.html" . }}</h1>
+    <p class="intro">{{ .Params.intro | markdownify }}</p>
+    {{- $links := site.Params.social | append (dict "name" "Email" "url" (printf "mailto:%s" site.Params.email)) }}
+    {{ partial "links.html" $links }}
+    {{- with .Params.now }}
+    <p class="now"><span class="label">Now</span> <span>{{ . | markdownify }}</span></p>
+    {{- end }}
+  </div>
+  {{- with resources.Get "images/portrait.jpg" }}
+  {{- $small := .Fill "480x600 Center webp q82" }}
+  {{- $large := .Fill "960x1200 Center webp q80" }}
+  <img class="portrait" src="{{ $small.RelPermalink }}" srcset="{{ $small.RelPermalink }} 480w, {{ $large.RelPermalink }} 960w" sizes="(max-width: 720px) 100vw, 340px" width="480" height="600" alt="Portrait of {{ site.Title }}">
   {{- end }}
 </div>
 

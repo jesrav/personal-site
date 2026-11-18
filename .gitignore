@@ -3,3 +3,4 @@
 /public/
 themes/PaperMod/public/
 .hugo_build.lock
+/resources/_gen/
