@@ -4,7 +4,7 @@ title: "Jes Ravnbøl"
 disableKinds: ["taxonomy", "term"]
 
 params:
-  description: "AI engineer based in Copenhagen, currently freelancing."
+  description: "I build agentic AI systems, and the evals and observability that prove they work. Freelance, based in Copenhagen."
   email: "mail@jesravnbol.dk"
   social:
     - name: GitHub
