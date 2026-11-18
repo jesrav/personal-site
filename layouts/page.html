@@ -1,0 +1,15 @@
+{{ define "main" }}
+<article class="post">
+  <div class="page-head">
+    {{- if not .Date.IsZero }}
+    <time class="caps" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }} · {{ .ReadingTime }} min read</time>
+    {{- end }}
+    <h1>{{ .Title }}</h1>
+    {{- with .Description }}<p class="lead">{{ . }}</p>{{ end }}
+  </div>
+  <div class="prose">{{ .Content }}</div>
+  {{- with .Parent }}
+  <p class="back caps"><a href="{{ .RelPermalink }}">← All {{ .Title | lower }}</a></p>
+  {{- end }}
+</article>
+{{ end }}

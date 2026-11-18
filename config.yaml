@@ -1,26 +1,28 @@
 baseURL: "https://jesrav.github.io/personal-site"
-languageCode: "en-us"
+locale: "en-us"
 title: "Jes Ravnbøl"
-theme: ["PaperMod"]
+disableKinds: ["taxonomy", "term"]
 
 params:
-  footer:
-    label: "jesravnbol.dk"  # footer keeps the domain; site title is the name
-  # home-info mode
-  homeInfoParams:
-    Title: "Jes Ravnbøl"
-    Description:  "AI engineer based in Copenhagen, currently freelancing."
-    Content: "I'm an AI engineer based in Copenhagen, currently freelancing."
-  socialIcons:
-    - name: github
+  description: "AI engineer based in Copenhagen, currently freelancing."
+  email: "mail@jesravnbol.dk"
+  social:
+    - name: GitHub
       url: "https://github.com/jesrav"
-    - name: linkedin
+    - name: LinkedIn
       url: "https://linkedin.com/in/jes-ravnbøl-7b2092111"
-    - name: email
-      url: "mailto:mail@jesravnbol.dk"
 
 menu:
   main:
-    - name: Work
-      url: /work/
+    # A url starting with "#" is a section on the home page.
+    - name: Projects
+      url: "#projects"
       weight: 10
+    # Hidden automatically until the first article is published.
+    - name: Articles
+      pageRef: /articles
+      weight: 20
+
+markup:
+  highlight:
+    style: nord

@@ -1,0 +1,7 @@
+{{- /* Full logo lockup: name + tagline between dimension ticks.
+       The tagline row is drawn in CSS (.lockup-sub); swap this partial for the
+       real lockup SVG when it is available. */ -}}
+<span class="lockup">
+  {{- partial "logo-letters.html" . -}}
+  <span class="lockup-sub"><i></i><b>{{ . }}</b><i></i></span>
+</span>

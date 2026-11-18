@@ -1,0 +1,37 @@
+{{ define "main" }}
+<div class="hero">
+  <h1 aria-label="{{ site.Title }}, {{ .Params.tagline }}">{{ partial "lockup.html" .Params.tagline }}</h1>
+  <p class="intro">{{ .Params.intro | markdownify }}</p>
+  {{- $links := site.Params.social | append (dict "name" "Email" "url" (printf "mailto:%s" site.Params.email)) }}
+  {{ partial "links.html" $links }}
+  {{- with .Params.now }}
+  <p class="now"><span class="label">Now</span> <span>{{ . | markdownify }}</span></p>
+  {{- end }}
+</div>
+
+{{- with site.GetPage "/projects" }}
+{{- with .RegularPages.ByWeight }}
+<section class="band" id="projects">
+  <h2 class="label">Projects</h2>
+  <div class="band-body">
+    {{- range . }}
+    <article class="project">
+      <h3>{{ .Title }}</h3>
+      {{- with .Params.lead }}<p class="lead">{{ . | markdownify }}</p>{{ end }}
+      <div class="prose">{{ .Content }}</div>
+      {{- with .Params.links }}{{ partial "links.html" . }}{{ end }}
+    </article>
+    {{- end }}
+  </div>
+</section>
+{{- end }}
+{{- end }}
+
+<section class="band" id="contact">
+  <h2 class="label">Contact</h2>
+  <div class="band-body">
+    <a class="big" href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a>
+    {{ partial "links.html" site.Params.social }}
+  </div>
+</section>
+{{ end }}
