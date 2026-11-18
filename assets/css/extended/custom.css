@@ -1,15 +1,17 @@
-/* Swiss: grotesk, uppercase tracked labels, red accent, generous whitespace */
+/* Swiss: grotesk, uppercase tracked labels, green accent on charcoal, generous whitespace */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 :root {
     --main-width: 760px; --gap: 32px;
     --theme: #fff; --entry: #fff; --code-bg: #fff;
-    --primary: #111; --content: #222; --secondary: #777; --border: #111;
-    --accent: #e0201b; --radius: 0;
+    --primary: #2e2e33; --content: #2e2e33; --secondary: #6c6c74; --border: #2e2e33;
+    --accent: #2f7d5b; --radius: 0;
 }
-:root[data-theme="dark"] { --theme: #111; --entry: #111; --code-bg: #111; --primary: #f4f4f4; --content: #ddd; --secondary: #888; --border: #f4f4f4; --accent: #ff4a44; }
+:root[data-theme="dark"] { --theme: #1f1f23; --entry: #1f1f23; --code-bg: #1f1f23; --primary: #f5f4f1; --content: #f5f4f1; --secondary: #a8a8b0; --border: #f5f4f1; --accent: #5fb891; }
 body, .list { background: var(--theme); font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 17px; line-height: 1.6; }
 .header-nav { border-bottom: 1px solid var(--border); max-width: calc(var(--main-width) + var(--gap) * 2); }
-.logo a { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em; }
+.logo a { display: inline-flex; align-items: center; }
+.logo .site-logo { display: inline-flex; color: var(--primary); }
+.logo .site-logo svg { height: 27px; width: auto; display: block; transform: none; border-radius: 0; margin: 0; }
 .menu a { font-size: 13px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.18em; }
 .menu .active { text-decoration: none; color: var(--accent); font-weight: 700; }
 .first-entry { min-height: 0; margin-top: 64px; }
@@ -23,3 +25,4 @@ body, .list { background: var(--theme); font-family: "Inter", "Helvetica Neue", 
 @media (hover: hover) { .md-content a:not(.anchor):hover { color: var(--accent); } }
 .social-icons a { padding: 8px 12px 8px 0; }
 .footer { text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; border-top: 1px solid var(--border); }
+.footer a { text-decoration-color: var(--accent); }

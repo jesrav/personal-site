@@ -1,9 +1,11 @@
 baseURL: "https://jesrav.github.io/personal-site"
 languageCode: "en-us"
-title: "jesravnbol.dk"
+title: "Jes Ravnbøl"
 theme: ["PaperMod"]
 
 params:
+  footer:
+    label: "jesravnbol.dk"  # footer keeps the domain; site title is the name
   # home-info mode
   homeInfoParams:
     Title: "Jes Ravnbøl"
