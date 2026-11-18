@@ -4,6 +4,9 @@ title: "Jes Ravnbøl"
 disableKinds: ["taxonomy", "term"]
 
 params:
+  # Theme for first-time visitors: "dark", "light", or "auto" (follow their system).
+  # A visitor who uses the toggle keeps their own choice.
+  defaultTheme: "dark"
   description: "I build agentic AI systems, and the evals and observability that prove they work. Freelance, based in Copenhagen."
   email: "mail@jesravnbol.dk"
   social:
