@@ -58,6 +58,8 @@ img { max-width: 100%; height: auto; }
 .hero h1 { font-size: inherit; line-height: 0; }
 .intro { font-size: 24px; line-height: 1.45; max-width: 560px; text-wrap: balance; margin-top: 48px; color: var(--grey); }
 .links { display: flex; flex-wrap: wrap; gap: 12px 28px; margin-top: 32px; }
+.links a { display: inline-flex; align-items: center; gap: 0.55em; }
+.arrow { width: 0.72em; height: 0.72em; flex: none; fill: none; stroke: currentColor; stroke-width: 1.1; }
 .hero .links { margin-top: auto; padding-top: 32px; }
 
 .band { border-top: 1px solid var(--fg); padding: 14px 0 96px; display: grid; grid-template-columns: 188px minmax(0, 640px); gap: 32px; scroll-margin-top: var(--header); }
