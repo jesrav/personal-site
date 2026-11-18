@@ -74,7 +74,7 @@ img { max-width: 100%; height: auto; }
 .project + .project { margin-top: 72px; padding-top: 56px; border-top: 1px solid var(--hairline); }
 .project h3 { font-size: 40px; font-weight: 700; letter-spacing: -0.035em; line-height: 1.1; }
 .lead { font-size: 22px; line-height: 1.45; margin: 18px 0 22px; }
-.big { font-size: clamp(26px, 5vw, 48px); font-weight: 700; letter-spacing: -0.035em; line-height: 1.15; overflow-wrap: anywhere; }
+.big { font-size: 22px; font-weight: 500; letter-spacing: -0.01em; line-height: 1.45; overflow-wrap: anywhere; }
 
 /* Inner pages */
 .page-head { padding: 72px 0 56px; }
