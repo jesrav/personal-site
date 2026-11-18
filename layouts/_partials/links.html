@@ -1,6 +1,7 @@
-{{- /* Row of external links. Input: slice of dicts with name and url. */ -}}
+{{- /* Row of external links. Input: slice of dicts with name and url.
+       The arrow is an SVG because iOS draws the "↗" character as an emoji. */ -}}
 <div class="links caps">
   {{- range . }}
-  <a href="{{ .url }}"{{ if hasPrefix .url "http" }} rel="noopener" target="_blank"{{ end }}>{{ .name }} ↗</a>
+  <a href="{{ .url }}"{{ if hasPrefix .url "http" }} rel="noopener" target="_blank"{{ end }}>{{ .name }}<svg class="arrow" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 8 8 2M3.5 2H8v4.5"/></svg></a>
   {{- end }}
 </div>
