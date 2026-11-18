@@ -36,7 +36,10 @@ img { max-width: 100%; height: auto; }
 /* Header */
 .site-header { position: sticky; top: 0; z-index: 5; background: var(--bg); border-bottom: 1px solid var(--fg); }
 .site-header .wrap { display: flex; align-items: center; justify-content: space-between; height: var(--header); }
-.site-logo { display: inline-flex; color: var(--fg); }
+.brand { display: flex; align-items: center; }
+/* Nudged down 2px so the letters of the logo share a baseline with the nav text
+   (the logo box also contains the line under the name, so centring it sits high). */
+.site-logo { display: inline-flex; color: var(--fg); position: relative; top: 2px; }
 .site-logo:hover { color: var(--fg); }
 .js .site-logo[data-reveal] { opacity: 0; visibility: hidden; transition: opacity 0.2s, visibility 0.2s; }
 .js .site-logo[data-reveal].is-visible { opacity: 1; visibility: visible; }
