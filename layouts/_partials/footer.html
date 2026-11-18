@@ -8,4 +8,14 @@ document.getElementById("theme-toggle").addEventListener("click", function () {
   root.dataset.theme = next;
   try { localStorage.setItem("theme", next); } catch (e) {}
 });
+
+// Home page: show the header logo once the big logo has scrolled out of view.
+(function () {
+  var link = document.querySelector(".site-logo[data-reveal]");
+  var hero = document.querySelector(".lockup");
+  if (!link || !hero || !("IntersectionObserver" in window)) { if (link) link.classList.add("is-visible"); return; }
+  new IntersectionObserver(function (entries) {
+    link.classList.toggle("is-visible", !entries[0].isIntersecting);
+  }, { rootMargin: "-60px 0px 0px 0px" }).observe(hero);
+})();
 </script>

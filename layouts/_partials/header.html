@@ -1,12 +1,12 @@
 <header class="site-header">
   <div class="wrap">
     <div class="brand">
-      {{- /* Home shows the full lockup right below the header, so no name here. */}}
-      {{- if not .IsHome }}
-      <a class="site-logo" href="{{ site.Home.RelPermalink }}" title="{{ site.Title }}">
+      {{- /* On the home page the full logo sits right below the header, so the
+             header logo stays hidden until that has scrolled out of view. It then
+             links back to the top. */}}
+      <a class="site-logo" href="{{ if .IsHome }}#top{{ else }}{{ site.Home.RelPermalink }}{{ end }}" title="{{ if .IsHome }}Back to top{{ else }}{{ site.Title }}{{ end }}"{{ if .IsHome }} data-reveal{{ end }}>
         {{- with resources.Get "header-logo-name.svg" }}{{ .Content | safeHTML }}{{ end -}}
       </a>
-      {{- end }}
     </div>
     <nav class="site-nav caps" aria-label="Main">
       {{- $page := . }}
