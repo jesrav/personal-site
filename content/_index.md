@@ -5,6 +5,6 @@ tagline: "AI Engineer & Architect"
 intro: |
   I build agentic AI systems, and the evals and observability that prove they work.\
   Freelance, based in Copenhagen.
-now: "AI architecture advisory for a shipping company, and agentic AI development at a large energy company."
+now: "AI architecture advisory for a shipping company, and agentic AI development in the energy sector."
 aliases: ["/work/"]
 ---
