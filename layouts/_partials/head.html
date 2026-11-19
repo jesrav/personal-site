@@ -9,8 +9,11 @@
 {{- if not (in (slice "dark" "light" "auto") $default) }}
   {{- errorf "params.defaultTheme must be \"dark\", \"light\" or \"auto\", got %q" $default }}
 {{- end }}
-<meta name="theme-color" content="{{ if eq $default "dark" }}#1f1f23{{ else }}#ffffff{{ end }}">
-<script>(function(){var d={{ $default }},t;try{t=localStorage.getItem("theme")}catch(e){}if(t!=="dark"&&t!=="light"){t=d==="auto"?(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"):d}var r=document.documentElement;r.dataset.theme=t;r.classList.add("js");document.querySelector('meta[name="theme-color"]').content=t==="dark"?"#1f1f23":"#ffffff"})()</script>
+{{- /* Address-bar colour: follows the system by default; the script below and the
+       toggle set both tags to the active theme when the site differs from the system. */}}
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1f1f23" media="(prefers-color-scheme: dark)">
+<script>(function(){var d={{ $default }},t;try{t=localStorage.getItem("theme")}catch(e){}if(t!=="dark"&&t!=="light"){t=d==="auto"?(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"):d}var r=document.documentElement;r.dataset.theme=t;r.classList.add("js");document.querySelectorAll('meta[name="theme-color"]').forEach(function(m){m.content=t==="dark"?"#1f1f23":"#ffffff"})})()</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap">
@@ -30,5 +33,17 @@
 <meta property="og:description" content="{{ .Description | default site.Params.description }}">
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
 <meta property="og:url" content="{{ .Permalink }}">
-<meta property="og:image" content="{{ "icon-512.png" | absURL }}">
+{{- /* Share image: site-wide default from params.shareImage in config.yaml. */}}
+{{- with site.Params.shareImage }}
+<meta property="og:image" content="{{ .path | absURL }}">
+<meta property="og:image:width" content="{{ .width }}">
+<meta property="og:image:height" content="{{ .height }}">
+<meta property="og:image:alt" content="{{ .alt }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{{ .path | absURL }}">
+<meta name="twitter:image:alt" content="{{ .alt }}">
+{{- else }}
 <meta name="twitter:card" content="summary">
+{{- end }}
+<meta name="twitter:title" content="{{ .Title }}">
+<meta name="twitter:description" content="{{ .Description | default site.Params.description }}">
