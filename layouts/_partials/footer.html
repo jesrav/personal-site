@@ -6,7 +6,7 @@ document.getElementById("theme-toggle").addEventListener("click", function () {
   var root = document.documentElement;
   var next = root.dataset.theme === "dark" ? "light" : "dark";
   root.dataset.theme = next;
-  document.querySelector('meta[name="theme-color"]').content = next === "dark" ? "#1f1f23" : "#ffffff";
+  document.querySelectorAll('meta[name="theme-color"]').forEach(function (m) { m.content = next === "dark" ? "#1f1f23" : "#ffffff"; });
   try { localStorage.setItem("theme", next); } catch (e) {}
 });
 

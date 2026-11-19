@@ -8,6 +8,12 @@ params:
   # A visitor who uses the toggle keeps their own choice.
   defaultTheme: "dark"
   description: "I build agentic AI systems, and the evals and observability that prove they work. Freelance, based in Copenhagen."
+  # Image shown when a page is shared (LinkedIn, Slack, Teams). File lives in static/.
+  shareImage:
+    path: "og-image.jpg"
+    width: 1200
+    height: 630
+    alt: "Jes Ravnbøl — AI Engineer & Architect"
   email: "mail@jesravnbol.dk"
   social:
     - name: GitHub
